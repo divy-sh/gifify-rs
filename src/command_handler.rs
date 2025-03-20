@@ -12,7 +12,7 @@ pub fn parse_args() {
         println!("  --fps <fps>         Set the frame rate (default: 10)");
         println!("  --start <seconds>   Start time in the video");
         println!("  --duration <seconds> Duration to convert");
-        println!("  --quality <1-5>     Quality level, 1 is best (default: 3)");
+        println!("  --quality <1-5>     Quality level, 5 is best (default: 3)");
         return;
     }
     
@@ -33,7 +33,7 @@ pub fn parse_args() {
     let mut fps = 10;
     let mut start_time = None;
     let mut duration = None;
-    let mut quality = 1;
+    let mut quality = 3;
     
     // Parse optional parameters
     let mut i = if args.len() >= 3 && !args[2].starts_with("--") { 3 } else { 2 };
